@@ -46,5 +46,14 @@ fn main() {
         "Desc_NitrogenGas_C".to_string(),
     ];
     println!("Input leaves: {:#?}", tier_0);
-    graph.find_n_tiers(9, &tier_0);
+    let tiers = graph.find_n_tiers(9, &tier_0);
+    let mut i = 0;
+    for tier in &tiers {
+        println!("Tier {}:", i);
+        for slug in tier {
+            println!("  {}", data.items[slug].name);
+        }
+        println!("");
+        i += 1;
+    }
 }
