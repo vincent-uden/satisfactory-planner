@@ -31,5 +31,20 @@ fn main() {
         graph.graph.node_count(),
         graph.graph.edge_count()
     );
-    println!("Input leaves: {:?}", graph.find_input_leaves());
+    let tier_0 = vec![
+        "Desc_OreGold_C".to_string(),
+        "Desc_OreIron_C".to_string(),
+        "Desc_OreCopper_C".to_string(),
+        "Desc_RawQuartz_C".to_string(),
+        "Desc_Coal_C".to_string(),
+        "Desc_Stone_C".to_string(),
+        "Desc_LiquidOil_C".to_string(),
+        "Desc_Sulfur_C".to_string(),
+        "Desc_OreUranium_C".to_string(),
+        "Desc_OreBauxite_C".to_string(),
+        "Desc_Water_C".to_string(),
+        "Desc_NitrogenGas_C".to_string(),
+    ];
+    println!("Input leaves: {:#?}", tier_0);
+    graph.find_n_tiers(9, &tier_0);
 }
